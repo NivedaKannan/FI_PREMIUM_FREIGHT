@@ -1,0 +1,29 @@
+{
+  "generationParameters": {
+    "generationDate": "Wed Dec 03 2025 06:18:21 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "https://fiori_dev.dest/sap/opu/odata/sap/ZSB_FI_PREMIUM_FRGT",
+    "appName": "zfi_premium_frgt_rap",
+    "appTitle": "Premium Freight RAP",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.108.37",
+    "enableCodeAssist": false,
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.19.6",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "ZCDS_FI_PREMIUM_FRGT_ROOT"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/zsb_fi_premium_frgt/$metadata">
+        <edmx:Include Namespace="ZSB_FI_PREMIUM_FRGT" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="zsb_fi_premium_frgt_van.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="cds_zserd_fi_premium_frgt.ZCDS_FI_PREMIUM_FRGT_ROOTType/TVSLSL_Approval_date">
+                <Annotation Term="UI.DataFieldDefault">
+                    <Record Type="UI.DataField">
+                    <PropertyValue Property="Label" String="TVSLSL Approval Date"/>
+                        <PropertyValue Property="Value" Path="TVSLSL_Approval_date" />
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_zserd_fi_premium_frgt.ZCDS_FI_PREMIUM_FRGT_ROOTType/Post_Item_ac">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zserd_fi_premium_frgt.ZCDS_FI_PREMIUM_FRGT_ROOTType/Delete_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zserd_fi_premium_frgt.ZCDS_FI_PREMIUM_FRGT_ROOTType/Update_mc">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="cds_zserd_fi_premium_frgt.ZCDS_FI_PREMIUM_FRGT_ROOTType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Header"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.Identification"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Premium Freight Request Number"/>
+                            <PropertyValue Property="Value" Path="pfr_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Created On"/>
+                            <PropertyValue Property="Value" Path="pfr_created_on"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Employee No."/>
+                            <PropertyValue Property="Value" Path="employee_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Extension No."/>
+                            <PropertyValue Property="Value" Path="extension_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Plant"/>
+                            <PropertyValue Property="Value" Path="werks"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Plant details"/>
+                            <PropertyValue Property="Value" Path="plant_detail"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Supplier"/>
+                            <PropertyValue Property="Value" Path="supplier"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Destination"/>
+                            <PropertyValue Property="Value" Path="supp_destination"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Transport Mode"/>
+                            <PropertyValue Property="Value" Path="trans_mode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Model"/>
+                            <PropertyValue Property="Value" Path="model"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Type"/>
+                            <PropertyValue Property="Value" Path="material_type"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Category"/>
+                            <PropertyValue Property="Value" Path="material_category"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Reason"/>
+                            <PropertyValue Property="Value" Path="pfr_reason"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Text"/>
+                            <PropertyValue Property="Value" Path="pfr_text"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Tentative Expense"/>
+                            <PropertyValue Property="Value" Path="tentative_expense"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Category"/>
+                            <PropertyValue Property="Value" Path="actual_expense"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Expense reason"/>
+                            <PropertyValue Property="Value" Path="actual_expense_reason"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Bill of Lading at Time of Goods Receipt"/>
+                            <PropertyValue Property="Value" Path="lr_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="TVSLSL 1st Approval Flag"/>
+                            <PropertyValue Property="Value" Path="tvslsl_approval_flag2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Date"/>
+                            <PropertyValue Property="Value" Path="tvslsl_approved_date2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Premium Freight Request Type"/>
+                            <PropertyValue Property="Value" Path="pfr_type"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Account Number of Supplier"/>
+                            <PropertyValue Property="Value" Path="debit_supplier"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Air transport modes"/>
+                            <PropertyValue Property="Value" Path="air_transport_modes"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Document No."/>
+                            <PropertyValue Property="Value" Path="fi_document_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Document Date"/>
+                            <PropertyValue Property="Value" Path="fi_document_date"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Premium Freight Request Number"/>
+                            <PropertyValue Property="Value" Path="pfr_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Created On"/>
+                            <PropertyValue Property="Value" Path="pfr_created_on"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Employee No."/>
+                            <PropertyValue Property="Value" Path="employee_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Extension No."/>
+                            <PropertyValue Property="Value" Path="extension_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Plant"/>
+                            <PropertyValue Property="Value" Path="werks"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Plant details"/>
+                            <PropertyValue Property="Value" Path="plant_detail"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Supplier"/>
+                            <PropertyValue Property="Value" Path="supplier"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Destination"/>
+                            <PropertyValue Property="Value" Path="supp_destination"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Transport Mode"/>
+                            <PropertyValue Property="Value" Path="trans_mode"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Model"/>
+                            <PropertyValue Property="Value" Path="model"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Type"/>
+                            <PropertyValue Property="Value" Path="material_type"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Bill of Lading at Time of Goods Receipt"/>
+                            <PropertyValue Property="Value" Path="lr_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Material Category"/>
+                            <PropertyValue Property="Value" Path="material_category"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Reason"/>
+                            <PropertyValue Property="Value" Path="pfr_reason"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Text"/>
+                            <PropertyValue Property="Value" Path="pfr_text"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Tentative Expense"/>
+                            <PropertyValue Property="Value" Path="tentative_expense"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Category"/>
+                            <PropertyValue Property="Value" Path="actual_expense"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Actual Expense Reason"/>
+                            <PropertyValue Property="Value" Path="actual_expense_reason"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="TVSLSL 1st Approval Flag"/>
+                            <PropertyValue Property="Value" Path="tvslsl_approval_flag2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Date"/>
+                            <PropertyValue Property="Value" Path="tvslsl_approved_date2"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Premium Freight Request Type"/>
+                            <PropertyValue Property="Value" Path="pfr_type"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Account Number of Supplier"/>
+                            <PropertyValue Property="Value" Path="debit_supplier"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Air transport modes"/>
+                            <PropertyValue Property="Value" Path="air_transport_modes"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Document No."/>
+                            <PropertyValue Property="Value" Path="fi_document_no"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Document Date"/>
+                            <PropertyValue Property="Value" Path="fi_document_date"/>
+                        </Record>
+                        <Record Type="UI.DataFieldForAction">
+                            <PropertyValue Property="Label" String="Click Here to Post"/>
+                            <PropertyValue Property="Action" String="cds_zserd_fi_premium_frgt.cds_zserd_fi_premium_frgt_Entities/Post_Item"/>
+                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>TVSLSL_Approval_date</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

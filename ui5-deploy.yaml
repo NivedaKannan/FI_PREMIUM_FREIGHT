@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "4.0"
+metadata:
+  name: zfipremiumfrgtrap
+type: application
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          destination: FIORI_DEV
+          url: http://thsfiorihcc.tvsmotor.co.in:6443
+          client: '200'
+        app:
+          name: ZFI_PREMIUM_RAP
+          description: Premium Freight - Posting RAP
+          package: ZFI
+          transport: DVSK9A0IRC
+        exclude:
+          - /test/
